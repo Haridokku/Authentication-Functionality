@@ -10,10 +10,6 @@ class Login extends Component {
     password: '',
   }
 
-  componentDidMount() {
-    this.getCredentials()
-  }
-
   onSubmitSuccess = jwtToken => {
     const {history} = this.props
 
@@ -43,6 +39,7 @@ class Login extends Component {
 
   onGetAccess = () => {
     this.setState({username: 'rahul', password: 'rahul@2021'})
+    this.getCredentials()
   }
 
   render() {
